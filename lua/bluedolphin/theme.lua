@@ -215,7 +215,7 @@ function M.setup()
 
     --- Punctuation
     ["@punctuation.delimiter"] = { fg = c.green3 }, -- For delimiters ie: `.`
-    ["@punctuation.bracket"] = { fg = c.fg_dark }, -- For brackets and parens.
+    ["@punctuation.bracket"] = { fg = c.yellow2 }, -- For brackets and parens.
     ["@punctuation.special"] = { fg = c.green3 }, -- For special punctutation that does not fall in the catagories before.
     ["@punctuation.special.markdown"] = { fg = c.orange, bold = true },
 
@@ -226,11 +226,11 @@ function M.setup()
 
     --- Functions
     ["@constructor"] = { fg = c.magenta }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    ["@parameter"] = { fg = c.fg }, -- For parameters of a function.
+    ["@parameter"] = { fg = c.white }, -- For parameters of a function.
     ["@parameter.builtin"] = { fg = util.lighten(c.yellow, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
     --- Keywords
-    ["@keyword"] = { fg = c.purple, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
+    ["@keyword"] = { fg = c.magenta, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
     -- TODO:
     -- ["@keyword.coroutine"] = { }, -- For keywords related to coroutines.
     ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
@@ -238,14 +238,14 @@ function M.setup()
     ["@label"] = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
 
     --- Types
-    ["@type.builtin"] = { fg = util.darken(c.blue1, 0.8) },
+    ["@type.builtin"] = { fg = util.lighten(c.blue1, 0.8) },
     ["@field"] = { fg = c.green1 }, -- For fields.
     ["@property"] = { fg = c.green1 },
 
     --- Identifiers
-    ["@variable"] = { fg = c.fg, style = options.styles.variables }, -- Any variable name that does not have another highlight.
-    ["@variable.builtin"] = { fg = c.purple }, -- Variable names that are defined by the languages, like `this` or `self`.
-    ["@namespace.builtin"] = { fg = c.purple }, -- Variable names that are defined by the languages, like `this` or `self`.
+    ["@variable"] = { fg = c.white, style = options.styles.variables }, -- Any variable name that does not have another highlight.
+    ["@variable.builtin"] = { fg = c.red2 }, -- Variable names that are defined by the languages, like `this` or `self`.
+    ["@namespace.builtin"] = { fg = c.red2 }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     --- Text
     -- ["@text.literal.markdown"] = { fg = c.blue },

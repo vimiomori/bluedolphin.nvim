@@ -5,6 +5,7 @@ local M = {}
 ---@class Palette
 M.default = {
   none = "NONE",
+  white = "#b4f9f8",
   bg_dark = "#00283F",
   bg = "#003955",
   bg_highlight = "#003F60",
@@ -36,6 +37,7 @@ M.default = {
   teal = "#0098B8",
   red = "#FF9898",
   red1 = "#FF7575",
+  red2 = "#FFACAF",
   git = { change = "#C6CD8C", add = "#449dab", delete = "#914c54" },
   gitSigns = {
     add = "#30FFF2",
