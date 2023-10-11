@@ -23,7 +23,7 @@ bluedolphin.replace = {
 }
 
 bluedolphin.inactive = {
-  left = { { colors.blue, colors.bg_statusline }, { colors.dark3, colors.bg } },
+  left = { { colors.cyan, colors.bg_statusline }, { colors.dark3, colors.bg } },
   middle = { { colors.fg_gutter, colors.bg_statusline } },
   right = { { colors.fg_gutter, colors.bg_statusline }, { colors.dark3, colors.bg } },
 }
