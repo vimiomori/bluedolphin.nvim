@@ -146,8 +146,8 @@ function M.setup(opts)
 
   colors.error = colors.red1
   colors.warning = colors.yellow
-  colors.info = colors.green3
-  colors.hint = colors.teal
+  colors.info = colors.blue
+  colors.hint = colors.green3
 
   colors.delta = {
     add = util.darken(colors.green2, 0.45),

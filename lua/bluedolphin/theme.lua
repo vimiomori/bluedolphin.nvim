@@ -108,7 +108,7 @@ function M.setup()
     Identifier = { fg = c.magenta, style = options.styles.variables }, -- (preferred) any variable name
     Function = { fg = c.cyan, style = options.styles.functions }, -- function name (also: methods for classes)
 
-    Statement = { fg = c.magenta }, -- (preferred) any statement
+    Statement = { fg = c.blue }, -- (preferred) any statement
     Conditional = { fg = c.blue }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = c.blue }, --   for, do, while, etc.
     Label = { fg = c.blue }, --    case, default, etc.
@@ -239,8 +239,8 @@ function M.setup()
 
     --- Types
     ["@type.builtin"] = { fg = util.lighten(c.green4, 0.8) },
-    ["@field"] = { fg = c.yellow3 }, -- For fields.
-    ["@property"] = { fg = c.yellow3 },
+    ["@field"] = { fg = c.white }, -- For fields.
+    ["@property"] = { fg = c.white },
 
     --- Identifiers
     ["@variable"] = { fg = c.white, style = options.styles.variables }, -- Any variable name that does not have another highlight.
