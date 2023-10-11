@@ -211,7 +211,7 @@ function M.setup()
     --- Misc
     -- TODO:
     -- ["@comment.documentation"] = { },
-    ["@operator"] = { fg = c.orange }, -- For any operator: `+`, but also `->` and `*` in C.
+    ["@operator"] = { fg = c.green3 }, -- For any operator: `+`, but also `->` and `*` in C.
 
     --- Punctuation
     ["@punctuation.delimiter"] = { fg = c.green3 }, -- For delimiters ie: `.`
@@ -226,7 +226,7 @@ function M.setup()
 
     --- Functions
     ["@constructor"] = { fg = c.magenta }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    ["@parameter"] = { fg = c.yellow2 }, -- For parameters of a function.
+    ["@parameter"] = { fg = c.fg }, -- For parameters of a function.
     ["@parameter.builtin"] = { fg = util.lighten(c.yellow, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
     --- Keywords
@@ -243,7 +243,7 @@ function M.setup()
     ["@property"] = { fg = c.green1 },
 
     --- Identifiers
-    ["@variable"] = { fg = c.magenta, style = options.styles.variables }, -- Any variable name that does not have another highlight.
+    ["@variable"] = { fg = c.fg, style = options.styles.variables }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"] = { fg = c.purple }, -- Variable names that are defined by the languages, like `this` or `self`.
     ["@namespace.builtin"] = { fg = c.purple }, -- Variable names that are defined by the languages, like `this` or `self`.
 
