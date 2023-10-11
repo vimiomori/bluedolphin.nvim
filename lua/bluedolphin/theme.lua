@@ -235,16 +235,17 @@ function M.setup()
     ["@keyword"] = { fg = c.magenta, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
     -- TODO:
     -- ["@keyword.coroutine"] = { }, -- For keywords related to coroutines.
-    ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
-    ["@keyword.return"] = { fg = c.blue, style = options.styles.functions }, -- For keywords used to define a fuction.
-    ["@conditional"] = { fg = c.blue, style = options.styles.functions }, -- For keywords used to define a fuction.
+    ["@keyword.function.go"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
+    ["@keyword.return.go"] = { fg = c.blue, style = options.styles.functions }, -- For keywords used to define a fuction.
+    ["@conditional.go"] = { fg = c.blue, style = options.styles.functions }, -- For keywords used to define a fuction.
 
     ["@label"] = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
 
     --- Types
     ["@type.builtin"] = { fg = util.lighten(c.green4, 0.8) },
-    ["@field"] = { fg = c.pink }, -- For fields.
-    ["@property"] = { fg = c.pink },
+    ["@type.builtin.go"] = { fg = util.lighten(c.green4, 0.8) },
+    ["@field"] = { fg = c.lavendar }, -- For fields.
+    ["@property"] = { fg = c.lavendar },
 
     --- Identifiers
     ["@variable"] = { fg = c.white, style = options.styles.variables }, -- Any variable name that does not have another highlight.
