@@ -228,19 +228,23 @@ function M.setup()
     ["@constructor"] = { fg = c.magenta }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     ["@parameter"] = { fg = c.white }, -- For parameters of a function.
     ["@parameter.builtin"] = { fg = util.lighten(c.yellow, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
+    ["@function.call"] = { fg = util.yellow3 },
+    ["@method.call"] = { fg = util.yellow3 },
 
     --- Keywords
-    ["@keyword"] = { fg = c.blue, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
+    ["@keyword"] = { fg = c.magenta, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
     -- TODO:
     -- ["@keyword.coroutine"] = { }, -- For keywords related to coroutines.
     ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
+    ["@keyword.return"] = { fg = c.blue, style = options.styles.functions }, -- For keywords used to define a fuction.
+    ["@conditional"] = { fg = c.blue, style = options.styles.functions }, -- For keywords used to define a fuction.
 
     ["@label"] = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
 
     --- Types
     ["@type.builtin"] = { fg = util.lighten(c.green4, 0.8) },
-    ["@field"] = { fg = c.white }, -- For fields.
-    ["@property"] = { fg = c.white },
+    ["@field"] = { fg = c.pink }, -- For fields.
+    ["@property"] = { fg = c.pink },
 
     --- Identifiers
     ["@variable"] = { fg = c.white, style = options.styles.variables }, -- Any variable name that does not have another highlight.
