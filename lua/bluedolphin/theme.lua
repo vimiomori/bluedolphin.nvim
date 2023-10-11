@@ -122,12 +122,12 @@ function M.setup()
     -- Macro         = { }, --    same as Define
     -- PreCondit     = { }, --  preprocessor #if, #else, #endif, etc.
 
-    Type = { fg = c.blue1 }, -- (preferred) int, long, char, etc.
+    Type = { fg = c.green4 }, -- (preferred) int, long, char, etc.
     -- StorageClass  = { }, -- static, register, volatile, etc.
     -- Structure     = { }, --  struct, union, enum, etc.
     -- Typedef       = { }, --  A typedef
 
-    Special = { fg = c.blue1 }, -- (preferred) any special symbol
+    Special = { fg = c.green4 }, -- (preferred) any special symbol
     -- SpecialChar   = { }, --  special character in a constant
     -- Tag           = { }, --    you can use CTRL-] on this
     -- Delimiter     = { }, --  character that needs attention
