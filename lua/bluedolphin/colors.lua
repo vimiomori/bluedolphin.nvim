@@ -146,7 +146,7 @@ function M.setup(opts)
 
   colors.error = colors.red1
   colors.warning = colors.yellow
-  colors.info = colors.blue2
+  colors.info = colors.green3
   colors.hint = colors.teal
 
   colors.delta = {
