@@ -101,18 +101,18 @@ function M.setup()
     Constant = { fg = c.orange }, -- (preferred) any constant
     String = { fg = c.green }, --   a string constant: "this is a string"
     Character = { fg = c.green }, --  a character constant: 'c', '\n'
-    -- Number        = { }, --   a number constant: 234, 0xff
-    -- Boolean       = { }, --  a boolean constant: TRUE, false
-    -- Float         = { }, --    a floating point constant: 2.3e10
+    Number = { fg = c.orange }, --   a number constant: 234, 0xff
+    Boolean = { fg = c.yellow }, --  a boolean constant: TRUE, false
+    Float = { fg = c.orange }, --    a floating point constant: 2.3e10
 
     Identifier = { fg = c.magenta, style = options.styles.variables }, -- (preferred) any variable name
-    Function = { fg = c.blue, style = options.styles.functions }, -- function name (also: methods for classes)
+    Function = { fg = c.cyan, style = options.styles.functions }, -- function name (also: methods for classes)
 
     Statement = { fg = c.magenta }, -- (preferred) any statement
-    -- Conditional   = { }, --  if, then, else, endif, switch, etc.
-    -- Repeat        = { }, --   for, do, while, etc.
-    -- Label         = { }, --    case, default, etc.
-    Operator = { fg = c.blue5 }, -- "sizeof", "+", "*", etc.
+    Conditional = { fg = c.blue }, --  if, then, else, endif, switch, etc.
+    Repeat = { fg = c.blue }, --   for, do, while, etc.
+    Label = { fg = c.blue }, --    case, default, etc.
+    Operator = { fg = c.green3 }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = c.cyan, style = options.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
