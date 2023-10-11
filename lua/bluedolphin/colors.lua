@@ -141,7 +141,7 @@ function M.setup(opts)
     or colors.bg
 
   colors.bg_visual = util.darken(colors.blue0, 0.4)
-  colors.bg_search = colors.blue0
+  colors.bg_search = colors.teal
   colors.fg_sidebar = colors.fg_dark
   -- colors.fg_float = config.options.styles.floats == "dark" and colors.fg_dark or colors.fg
   colors.fg_float = colors.fg

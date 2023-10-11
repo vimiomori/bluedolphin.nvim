@@ -73,7 +73,7 @@ function M.setup()
     Question = { fg = c.blue }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = { bg = c.bg_visual, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search = { bg = c.bg_search, fg = c.fg }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-    IncSearch = { bg = c.orange, fg = c.black }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    IncSearch = { bg = c.green1, fg = c.yellow3 }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { link = "IncSearch" },
     SpecialKey = { fg = c.dark3 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     SpellBad = { sp = c.error, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
@@ -113,7 +113,7 @@ function M.setup()
     Repeat = { fg = c.blue }, --   for, do, while, etc.
     Label = { fg = c.blue }, --    case, default, etc.
     Operator = { fg = c.green3 }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = c.cyan, style = options.styles.keywords }, --  any other keyword
+    Keyword = { fg = c.blue, style = options.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
     PreProc = { fg = c.cyan }, -- (preferred) generic Preprocessor
@@ -232,9 +232,12 @@ function M.setup()
     ["@method.call"] = { fg = util.yellow3 },
 
     --- Keywords
-    ["@keyword"] = { fg = c.magenta, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
+    -- ["@keyword"] = { fg = c.blue, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
     -- TODO:
     -- ["@keyword.coroutine"] = { }, -- For keywords related to coroutines.
+    ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
+    ["@keyword.return"] = { fg = c.blue, style = options.styles.functions }, -- For keywords used to define a fuction.
+    ["@conditional"] = { fg = c.blue, style = options.styles.functions }, -- For keywords used to define a fuction.
     ["@keyword.function.go"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
     ["@keyword.return.go"] = { fg = c.blue, style = options.styles.functions }, -- For keywords used to define a fuction.
     ["@conditional.go"] = { fg = c.blue, style = options.styles.functions }, -- For keywords used to define a fuction.
