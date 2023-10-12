@@ -211,7 +211,7 @@ function M.setup()
     --- Misc
     -- TODO:
     -- ["@comment.documentation"] = { },
-    ["@operator"] = { fg = c.green3 }, -- For any operator: `+`, but also `->` and `*` in C.
+    ["@operator"] = { fg = c.orange }, -- For any operator: `+`, but also `->` and `*` in C.
 
     --- Punctuation
     ["@punctuation.delimiter"] = { fg = c.green3 }, -- For delimiters ie: `.`
@@ -225,7 +225,7 @@ function M.setup()
     ["@string.escape"] = { fg = c.magenta }, -- For escape characters within a string.
 
     --- Functions
-    ["@constructor"] = { fg = c.magenta }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    ["@constructor"] = { fg = c.orange }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     ["@parameter"] = { fg = c.white }, -- For parameters of a function.
     ["@parameter.builtin"] = { fg = util.lighten(c.yellow, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
     ["@function.call"] = { fg = util.yellow3 },
