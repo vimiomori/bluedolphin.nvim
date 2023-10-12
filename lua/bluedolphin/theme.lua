@@ -463,7 +463,7 @@ function M.setup()
     DashboardHeader = { fg = c.blue },
     DashboardCenter = { fg = c.magenta },
     DashboardFooter = { fg = c.blue1 },
-    DashboardKey = { fg = c.orange },
+    DashboardKey = { fg = c.yellow3 },
     DashboardDesc = { fg = c.cyan },
     DashboardIcon = { fg = c.cyan, bold = true },
 
@@ -477,7 +477,7 @@ function M.setup()
     -- WhichKey
     WhichKey = { fg = c.cyan },
     WhichKeyGroup = { fg = c.blue },
-    WhichKeyDesc = { fg = c.magenta },
+    WhichKeyDesc = { fg = c.pink },
     WhichKeySeperator = { fg = c.comment },
     WhichKeySeparator = { fg = c.comment },
     WhichKeyFloat = { bg = c.bg_sidebar },
@@ -697,7 +697,7 @@ function M.setup()
     YankyYanked = { link = "IncSearch" },
 
     -- Lazy
-    LazyProgressDone = { bold = true, fg = c.magenta2 },
+    LazyProgressDone = { bold = true, fg = c.green5 },
     LazyProgressTodo = { bold = true, fg = c.fg_gutter },
 
     -- Notify
