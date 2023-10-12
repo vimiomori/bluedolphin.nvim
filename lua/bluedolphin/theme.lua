@@ -116,7 +116,7 @@ function M.setup()
     Keyword = { fg = c.blue, style = options.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
-    PreProc = { fg = c.cyan }, -- (preferred) generic Preprocessor
+    PreProc = { fg = c.yellow4 }, -- (preferred) generic Preprocessor and imports
     -- Include       = { }, --  preprocessor #include
     -- Define        = { }, --   preprocessor #define
     -- Macro         = { }, --    same as Define
@@ -245,10 +245,10 @@ function M.setup()
     ["@label"] = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
 
     --- Types
-    ["@type.builtin"] = { fg = util.lighten(c.green4, 0.8) },
-    ["@type.builtin.go"] = { fg = util.lighten(c.green4, 0.8) },
+    ["@type.builtin"] = { fg = c.green5 },
+    ["@type.builtin.go"] = { fg = c.green5 },
     ["@field"] = { fg = c.lavendar }, -- For fields.
-    ["@property"] = { fg = c.lavendar },
+    ["@property"] = { fg = c.pink },
 
     --- Identifiers
     ["@variable"] = { fg = c.white, style = options.styles.variables }, -- Any variable name that does not have another highlight.
@@ -312,6 +312,7 @@ function M.setup()
     ["@lsp.typemod.string.injected"] = { link = "@string" },
     ["@lsp.typemod.struct.defaultLibrary"] = { link = "@type.builtin" },
     ["@lsp.typemod.type.defaultLibrary"] = { fg = util.darken(c.blue1, 0.8) },
+
     ["@lsp.typemod.typeAlias.defaultLibrary"] = { fg = util.darken(c.blue1, 0.8) },
     ["@lsp.typemod.variable.callable"] = { link = "@function" },
     ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
