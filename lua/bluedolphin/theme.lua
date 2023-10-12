@@ -108,12 +108,12 @@ function M.setup()
     Identifier = { fg = c.magenta, style = options.styles.variables }, -- (preferred) any variable name
     Function = { fg = c.cyan, style = options.styles.functions }, -- function name (also: methods for classes)
 
-    Statement = { fg = c.blue8 }, -- (preferred) any statement
-    Conditional = { fg = c.blue8 }, --  if, then, else, endif, switch, etc.
-    Repeat = { fg = c.blue8 }, --   for, do, while, etc.
-    Label = { fg = c.blue8 }, --    case, default, etc.
+    Statement = { fg = c.blue9 }, -- (preferred) any statement
+    Conditional = { fg = c.blue9 }, --  if, then, else, endif, switch, etc.
+    Repeat = { fg = c.blue9 }, --   for, do, while, etc.
+    Label = { fg = c.blue9 }, --    case, default, etc.
     Operator = { fg = c.green3 }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = c.blue8, style = options.styles.keywords }, --  any other keyword
+    Keyword = { fg = c.blue9, style = options.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
     PreProc = { fg = c.yellow4 }, -- (preferred) generic Preprocessor and imports
