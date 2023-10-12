@@ -468,9 +468,9 @@ function M.setup()
     DashboardIcon = { fg = c.cyan, bold = true },
 
     -- Alpha
-    AlphaShortcut = { fg = c.orange },
+    AlphaShortcut = { fg = c.yellow3 },
     AlphaHeader = { fg = c.blue },
-    AlphaHeaderLabel = { fg = c.orange },
+    AlphaHeaderLabel = { fg = c.yellow3 },
     AlphaFooter = { fg = c.blue1 },
     AlphaButtons = { fg = c.cyan },
 
