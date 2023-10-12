@@ -72,8 +72,8 @@ function M.setup()
     PmenuThumb = { bg = c.fg_gutter }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = c.blue }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = { bg = c.bg_visual, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    Search = { bg = c.bg_search, fg = c.fg }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-    IncSearch = { bg = c.green1, fg = c.yellow3 }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    Search = { bg = c.bg_search, fg = c.white }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    IncSearch = { bg = c.teal2, fg = c.yellow3 }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { link = "IncSearch" },
     SpecialKey = { fg = c.dark3 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     SpellBad = { sp = c.error, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
@@ -216,7 +216,7 @@ function M.setup()
     --- Punctuation
     ["@punctuation.delimiter"] = { fg = c.green3 }, -- For delimiters ie: `.`
     ["@punctuation.bracket"] = { fg = c.yellow2 }, -- For brackets and parens.
-    ["@punctuation.special"] = { fg = c.green3 }, -- For special punctutation that does not fall in the catagories before.
+    ["@punctuation.special"] = { fg = c.orange }, -- For special punctutation that does not fall in the catagories before.
     ["@punctuation.special.markdown"] = { fg = c.orange, bold = true },
 
     --- Literals

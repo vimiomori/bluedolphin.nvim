@@ -43,6 +43,7 @@ M.default = {
   green4 = "#5DFFAE",
   green5 = "#30FFF2",
   teal = "#0098B8",
+  teal2 = "#007F9A",
   red = "#FF9898",
   red1 = "#FF7575",
   red2 = "#FFACAF",
@@ -145,7 +146,7 @@ function M.setup(opts)
     or colors.bg
 
   colors.bg_visual = util.darken(colors.blue0, 0.4)
-  colors.bg_search = colors.teal
+  colors.bg_search = colors.fg_gutter
   colors.fg_sidebar = colors.fg_dark
   -- colors.fg_float = config.options.styles.floats == "dark" and colors.fg_dark or colors.fg
   colors.fg_float = colors.fg
