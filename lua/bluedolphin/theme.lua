@@ -211,7 +211,7 @@ function M.setup()
     --- Misc
     -- TODO:
     -- ["@comment.documentation"] = { },
-    ["@operator"] = { fg = c.orange }, -- For any operator: `+`, but also `->` and `*` in C.
+    ["@operator"] = { fg = c.green3 }, -- For any operator: `+`, but also `->` and `*` in C.
 
     --- Punctuation
     ["@punctuation.delimiter"] = { fg = c.green3 }, -- For delimiters ie: `.`
