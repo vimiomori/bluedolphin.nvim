@@ -26,6 +26,7 @@ M.default = {
   blue7 = "#005cad",
   blue8 = "#72EAFF",
   blue9 = "#00B6FF",
+  blue10 = "#29CEFF",
   magenta2 = "#ff007c",
   magenta = "#ffcbe6",
   purple = "#EBB6FF",
