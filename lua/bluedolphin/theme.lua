@@ -557,7 +557,7 @@ function M.setup()
     BufferInactiveSign = { bg = util.darken(c.bg_highlight, 0.4), fg = c.bg },
     BufferInactiveTarget = { bg = util.darken(c.bg_highlight, 0.4), fg = c.red },
     BufferOffset = { bg = c.bg_statusline, fg = c.dark5 },
-    BufferTabpageFill = { bg = util.darken(c.bg_highlight, 0.8), fg = c.dark5 },
+    BufferTabpageFill = { bg = c.bg_statusline, fg = c.dark5 },
     BufferTabpages = { bg = c.bg_statusline, fg = c.none },
 
     -- Sneak
