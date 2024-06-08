@@ -31,9 +31,9 @@ function M.setup()
     Comment = { fg = c.comment, style = options.styles.comments }, -- any comment
     ColorColumn = { bg = c.black }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.dark5 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-    Cursor = { fg = c.bg_dark, bg = c.fg }, -- character under the cursor
-    lCursor = { fg = c.bg_dark, bg = c.fg }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-    CursorIM = { fg = c.bg_dark, bg = c.fg }, -- like Cursor, but used when in IME mode |CursorIM|
+    Cursor = { fg = c.bg, bg = c.fg }, -- character under the cursor
+    lCursor = { fg = c.bg, bg = c.fg }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+    CursorIM = { fg = c.bg, bg = c.fg }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = { bg = c.bg_highlight }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine = { bg = c.bg_highlight }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     Directory = { fg = c.blue }, -- directory names (and other special names in listings)
@@ -41,7 +41,7 @@ function M.setup()
     DiffChange = { bg = c.diff.change }, -- diff mode: Changed line |diff.txt|
     DiffDelete = { bg = c.diff.delete }, -- diff mode: Deleted line |diff.txt|
     DiffText = { bg = c.diff.text }, -- diff mode: Changed text within a changed line |diff.txt|
-    EndOfBuffer = { fg = c.bg_dark }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
+    EndOfBuffer = { fg = c.bg }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     -- TermCursor  = { }, -- cursor in a focused terminal
     -- TermCursorNC= { }, -- cursor in an unfocused terminal
     ErrorMsg = { fg = c.error }, -- error messages on the command line
@@ -60,8 +60,8 @@ function M.setup()
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = c.blue }, -- |more-prompt|
     NonText = { fg = c.dark3 }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Normal = { fg = c.fg, bg = c.bg_dark }, -- normal text
-    NormalNC = { fg = c.fg, bg = options.dim_inactive and c.bg_dim or c.bg_dark }, -- normal text in non-current windows
+    Normal = { fg = c.fg, bg = c.bg }, -- normal text
+    NormalNC = { fg = c.fg, bg = options.dim_inactive and c.bg_dim or c.bg }, -- normal text in non-current windows
     NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in sidebar
     NormalFloat = { fg = c.fg_float, bg = c.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = c.border_highlight, bg = c.bg_float },
@@ -142,7 +142,7 @@ function M.setup()
     -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
     Error = { fg = c.error }, -- (preferred) any erroneous construct
-    Todo = { bg = c.yellow, fg = c.bg_dark }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo = { bg = c.yellow, fg = c.bg }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     qfLineNr = { fg = c.dark5 },
     qfFileName = { fg = c.blue },
@@ -262,8 +262,8 @@ function M.setup()
 
     ["@text.todo.unchecked"] = { fg = c.blue }, -- For brackets and parens.
     ["@text.todo.checked"] = { fg = c.green1 }, -- For brackets and parens.
-    ["@text.warning"] = { fg = c.bg_dark, bg = c.warning },
-    ["@text.danger"] = { fg = c.bg_dark, bg = c.error },
+    ["@text.warning"] = { fg = c.bg, bg = c.warning },
+    ["@text.danger"] = { fg = c.bg, bg = c.error },
 
     ["@text.diff.add"] = { link = "DiffAdd" },
     ["@text.diff.delete"] = { link = "DiffDelete" },
@@ -446,8 +446,8 @@ function M.setup()
     NeoTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NeoTreeNormalNC = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NeoTreeDimText = { fg = c.fg_gutter },
-    NeoTreeWinSeparator = { fg = c.bg, bg = c.bg},
-    NeoTreeTitleBar = { fg = c.bg, bg = c.bg },
+    NeoTreeWinSeparator = { fg = c.bg_dark, bg = c.bg_dark},
+    NeoTreeTitleBar = { fg = c.bg_dark, bg = c.bg_dark },
 
     -- Fern
     FernBranchText = { fg = c.blue },
@@ -516,16 +516,16 @@ function M.setup()
     BufferLineIndicatorSelected = { fg = c.cyan },
 
     -- Barbar
-    BufferCurrent = { bg = c.bg_dark, fg = c.fg },
-    BufferCurrentERROR = { bg = c.bg_dark, fg = c.error },
-    BufferCurrentHINT = { bg = c.bg_dark, fg = c.hint },
+    BufferCurrent = { bg = c.bg, fg = c.fg },
+    BufferCurrentERROR = { bg = c.bg, fg = c.error },
+    BufferCurrentHINT = { bg = c.bg, fg = c.hint },
     -- BufferCurrentIcon = { bg = c.bg, fg = c.},
-    BufferCurrentINFO = { bg = c.bg_dark, fg = c.info },
-    BufferCurrentWARN = { bg = c.bg_dark, fg = c.warning },
-    BufferCurrentIndex = { bg = c.bg_dark, fg = c.info },
-    BufferCurrentMod = { bg = c.bg_dark, fg = c.warning },
-    BufferCurrentSign = { bg = c.bg_dark, fg = c.bg_dark },
-    BufferCurrentTarget = { bg = c.bg_dark, fg = c.red },
+    BufferCurrentINFO = { bg = c.bg, fg = c.info },
+    BufferCurrentWARN = { bg = c.bg, fg = c.warning },
+    BufferCurrentIndex = { bg = c.bg, fg = c.info },
+    BufferCurrentMod = { bg = c.bg, fg = c.warning },
+    BufferCurrentSign = { bg = c.bg, fg = c.bg },
+    BufferCurrentTarget = { bg = c.bg, fg = c.red },
     BufferAlternate = { bg = c.fg_gutter, fg = c.fg },
     BufferAlternateERROR = { bg = c.fg_gutter, fg = c.error },
     BufferAlternateHINT = { bg = c.fg_gutter, fg = c.hint },
@@ -554,7 +554,7 @@ function M.setup()
     BufferInactiveWARN = { bg = util.darken(c.bg_highlight, 0.4), fg = util.darken(c.warning, 0.8) },
     BufferInactiveIndex = { bg = util.darken(c.bg_highlight, 0.4), fg = c.dark5 },
     BufferInactiveMod = { bg = util.darken(c.bg_highlight, 0.4), fg = util.darken(c.warning, 0.8) },
-    BufferInactiveSign = { bg = util.darken(c.bg_highlight, 0.4), fg = c.bg_dark },
+    BufferInactiveSign = { bg = util.darken(c.bg_highlight, 0.4), fg = c.bg },
     BufferInactiveTarget = { bg = util.darken(c.bg_highlight, 0.4), fg = c.red },
     BufferOffset = { bg = c.bg_statusline, fg = c.dark5 },
     BufferTabpageFill = { bg = util.darken(c.bg_highlight, 0.8), fg = c.dark5 },
@@ -704,13 +704,13 @@ function M.setup()
     LazyProgressTodo = { bold = true, fg = c.fg_gutter },
 
     -- Notify
-    NotifyBackground = { fg = c.fg, bg = c.bg_dark },
+    NotifyBackground = { fg = c.fg, bg = c.bg },
     --- Border
-    NotifyERRORBorder = { fg = util.darken(c.error, 0.3), bg = c.none or c.bg_dark },
-    NotifyWARNBorder = { fg = util.darken(c.warning, 0.3), bg = c.none or c.bg_dark },
-    NotifyINFOBorder = { fg = util.darken(c.info, 0.3), bg = c.none or c.bg_dark },
-    NotifyDEBUGBorder = { fg = util.darken(c.comment, 0.3), bg = c.none or c.bg_dark },
-    NotifyTRACEBorder = { fg = util.darken(c.purple, 0.3), bg = c.none or c.bg_dark },
+    NotifyERRORBorder = { fg = util.darken(c.error, 0.3), bg = c.none or c.bg },
+    NotifyWARNBorder = { fg = util.darken(c.warning, 0.3), bg = c.none or c.bg },
+    NotifyINFOBorder = { fg = util.darken(c.info, 0.3), bg = c.none or c.bg },
+    NotifyDEBUGBorder = { fg = util.darken(c.comment, 0.3), bg = c.none or c.bg },
+    NotifyTRACEBorder = { fg = util.darken(c.purple, 0.3), bg = c.none or c.bg },
     --- Icons
     NotifyERRORIcon = { fg = c.error },
     NotifyWARNIcon = { fg = c.warning },
@@ -724,11 +724,11 @@ function M.setup()
     NotifyDEBUGTitle = { fg = c.comment },
     NotifyTRACETitle = { fg = c.purple },
     --- Body
-    NotifyERRORBody = { fg = c.fg, bg = c.none or c.bg_dark },
-    NotifyWARNBody = { fg = c.fg, bg = c.none or c.bg_dark },
-    NotifyINFOBody = { fg = c.fg, bg = c.none or c.bg_dark },
-    NotifyDEBUGBody = { fg = c.fg, bg = c.none or c.bg_dark },
-    NotifyTRACEBody = { fg = c.fg, bg = c.none or c.bg_dark },
+    NotifyERRORBody = { fg = c.fg, bg = c.none or c.bg },
+    NotifyWARNBody = { fg = c.fg, bg = c.none or c.bg },
+    NotifyINFOBody = { fg = c.fg, bg = c.none or c.bg },
+    NotifyDEBUGBody = { fg = c.fg, bg = c.none or c.bg },
+    NotifyTRACEBody = { fg = c.fg, bg = c.none or c.bg },
 
     -- Mini
     MiniCompletionActiveParameter = { underline = true },
@@ -747,7 +747,7 @@ function M.setup()
     MiniStarterFooter = { fg = c.yellow, italic = true },
     MiniStarterHeader = { fg = c.blue },
     MiniStarterInactive = { fg = c.comment, style = options.styles.comments },
-    MiniStarterItem = { fg = c.fg, bg = c.none or c.bg_dark },
+    MiniStarterItem = { fg = c.fg, bg = c.none or c.bg },
     MiniStarterItemBullet = { fg = c.border_highlight },
     MiniStarterItemPrefix = { fg = c.warning },
     MiniStarterSection = { fg = c.blue1 },
@@ -838,7 +838,7 @@ function M.setup()
   theme.defer = {}
 
   if options.hide_inactive_statusline then
-    local inactive = { underline = true, bg = c.none, fg = c.bg_dark, sp = c.border }
+    local inactive = { underline = true, bg = c.none, fg = c.bg, sp = c.border }
 
     -- StatusLineNC
     theme.highlights.StatusLineNC = inactive

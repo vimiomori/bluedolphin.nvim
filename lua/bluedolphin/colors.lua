@@ -6,8 +6,8 @@ local M = {}
 M.default = {
   none = "NONE",
   white = "#b4f9f8",
-  bg = "#00283F",
-  bg_dark = "#003955",
+  bg_dark = "#00283F",
+  bg = "#003955",
   bg_dim = "#00334D",
   bg_visual = "#002F47",
   bg_highlight = "#003F60",
@@ -120,7 +120,7 @@ function M.setup(opts)
   ---@class ColorScheme: Palette
   local colors = vim.tbl_deep_extend("force", vim.deepcopy(M.default), palette)
 
-  util.bg = colors.bg_dark
+  util.bg = colors.bg
   util.day_brightness = config.options.day_brightness
 
   colors.diff = {
@@ -131,15 +131,15 @@ function M.setup(opts)
   }
 
   colors.git.ignore = colors.dark3
-  colors.black = util.darken(colors.bg_dark, 0.8, "#000000")
+  colors.black = util.darken(colors.bg, 0.8, "#000000")
   colors.border_highlight = util.darken(colors.blue1, 0.8)
   colors.border = colors.teal2
 
   -- dark background
-  colors.bg_popup = colors.bg
-  colors.bg_statusline = colors.bg
-  colors.bg_sidebar = colors.bg
-  colors.bg_float = colors.bg
+  colors.bg_popup = colors.bg_dark
+  colors.bg_statusline = colors.bg_dark
+  colors.bg_sidebar = colors.bg_dark
+  colors.bg_float = colors.bg_dark
 
   colors.bg_search = colors.fg_gutter
   colors.fg_sidebar = colors.fg_dark
