@@ -140,7 +140,7 @@ function M.setup(opts)
   colors.bg_sidebar = colors.bg_dark
   colors.bg_float = colors.bg_dark
 
-  colors.bg_visual = colors.bg_dark
+  colors.bg_visual = colors.bg_dim
   colors.bg_search = colors.fg_gutter
   colors.fg_sidebar = colors.fg_dark
   colors.fg_float = colors.fg
