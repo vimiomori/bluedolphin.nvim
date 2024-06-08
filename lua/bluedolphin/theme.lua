@@ -510,7 +510,7 @@ function M.setup()
     healthWarning = { fg = c.warning },
 
     -- BufferLine
-    BufferLineIndicatorSelected = { fg = c.git.change },
+    BufferLineIndicatorSelected = { fg = c.cyan },
 
     -- Barbar
     BufferCurrent = { bg = c.bg, fg = c.fg },
@@ -851,7 +851,7 @@ function M.setup()
 
   options.on_highlights(theme.highlights, theme.colors)
 
-  if config.is_day() then
+  if config.is_bluer() then
     util.invert_colors(theme.colors)
     util.invert_highlights(theme.highlights)
   end
