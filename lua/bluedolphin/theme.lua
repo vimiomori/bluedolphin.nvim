@@ -446,7 +446,7 @@ function M.setup()
     NeoTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NeoTreeNormalNC = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NeoTreeDimText = { fg = c.fg_gutter },
-    NeoTreeWinSeparator = { fg = c.bg_dark, bg = c.bg_dark},
+    NeoTreeWinSeparator = { fg = c.bg_dark, bg = c.bg_dark },
     NeoTreeTitleBar = { fg = c.bg_dark, bg = c.bg_dark },
 
     -- Fern
@@ -557,7 +557,7 @@ function M.setup()
     BufferInactiveSign = { bg = util.darken(c.bg_highlight, 0.4), fg = c.bg },
     BufferInactiveTarget = { bg = util.darken(c.bg_highlight, 0.4), fg = c.red },
     BufferOffset = { bg = c.bg_statusline, fg = c.dark5 },
-    BufferTabpageFill = { bg = c.bg_statusline, fg = c.dark5 },
+    BufferTabpageFill = { bg = c.red, fg = c.dark5 },
     BufferTabpages = { bg = c.bg_statusline, fg = c.none },
 
     -- Sneak
