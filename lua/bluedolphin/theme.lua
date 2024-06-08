@@ -59,7 +59,7 @@ function M.setup()
     MsgArea = { fg = c.fg_dark }, -- Area for messages and cmdline
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = c.blue }, -- |more-prompt|
-    NonText = { fg = c.dark3 }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    NonText = { fg = c.grey }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal = { fg = c.fg, bg = c.bg }, -- normal text
     NormalNC = { fg = c.fg, bg = options.dim_inactive and c.bg_dim or c.bg }, -- normal text in non-current windows
     NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in sidebar
@@ -75,7 +75,7 @@ function M.setup()
     Search = { bg = c.bg_search, fg = c.white }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { bg = c.teal2, fg = c.yellow3 }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { link = "IncSearch" },
-    SpecialKey = { fg = c.dark3 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
+    SpecialKey = { fg = c.grey }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     SpellBad = { sp = c.error, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     SpellCap = { sp = c.warning, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal = { sp = c.info, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
@@ -196,7 +196,7 @@ function M.setup()
 
     LspSignatureActiveParameter = { bg = util.darken(c.bg_visual, 0.4), bold = true },
     LspCodeLens = { fg = c.comment },
-    LspInlayHint = { bg = util.darken(c.blue7, 0.1), fg = c.dark3 },
+    LspInlayHint = { bg = util.darken(c.blue7, 0.1), fg = c.grey },
 
     LspInfoBorder = { fg = c.border_highlight, bg = c.bg_float },
 
@@ -568,20 +568,20 @@ function M.setup()
     HopNextKey = { fg = c.magenta2, bold = true },
     HopNextKey1 = { fg = c.blue2, bold = true },
     HopNextKey2 = { fg = util.darken(c.blue2, 0.6) },
-    HopUnmatched = { fg = c.dark3 },
+    HopUnmatched = { fg = c.grey },
 
     TSNodeKey = { fg = c.magenta2, bold = true },
-    TSNodeUnmatched = { fg = c.dark3 },
+    TSNodeUnmatched = { fg = c.grey },
 
     LeapMatch = { bg = c.magenta2, fg = c.fg, bold = true },
     LeapLabelPrimary = { fg = c.magenta2, bold = true },
     LeapLabelSecondary = { fg = c.green1, bold = true },
-    LeapBackdrop = { fg = c.dark3 },
+    LeapBackdrop = { fg = c.grey },
 
-    FlashBackdrop = { fg = c.dark3 },
+    FlashBackdrop = { fg = c.grey },
     FlashLabel = { bg = c.magenta2, bold = true, fg = c.fg },
 
-    LightspeedGreyWash = { fg = c.dark3 },
+    LightspeedGreyWash = { fg = c.grey },
     -- LightspeedCursor = { link = "Cursor" },
     LightspeedLabel = { fg = c.magenta2, bold = true, underline = true },
     LightspeedLabelDistant = { fg = c.green1, bold = true, underline = true },

@@ -23,16 +23,16 @@ bluedolphin.replace = {
 }
 
 bluedolphin.inactive = {
-  left = { { colors.cyan, colors.bg_statusline }, { colors.dark3, colors.bg } },
+  left = { { colors.cyan, colors.bg_statusline }, { colors.grey, colors.bg } },
   middle = { { colors.fg_gutter, colors.bg_statusline } },
-  right = { { colors.fg_gutter, colors.bg_statusline }, { colors.dark3, colors.bg } },
+  right = { { colors.fg_gutter, colors.bg_statusline }, { colors.grey, colors.bg } },
 }
 
 bluedolphin.tabline = {
-  left = { { colors.dark3, colors.bg_highlight }, { colors.dark3, colors.bg } },
+  left = { { colors.grey, colors.bg_highlight }, { colors.grey, colors.bg } },
   middle = { { colors.fg_gutter, colors.bg_statusline } },
-  right = { { colors.fg_gutter, colors.bg_statusline }, { colors.dark3, colors.bg } },
-  tabsel = { { colors.blue, colors.fg_gutter }, { colors.dark3, colors.bg } },
+  right = { { colors.fg_gutter, colors.bg_statusline }, { colors.grey, colors.bg } },
+  tabsel = { { colors.blue, colors.fg_gutter }, { colors.grey, colors.bg } },
 }
 
 return bluedolphin

@@ -6,16 +6,18 @@ local M = {}
 M.default = {
   none = "NONE",
   white = "#b4f9f8",
+  bg_light = "#003955",
+  -- bg = "#00334D",
   bg_dark = "#00283F",
-  bg = "#003955",
-  bg_dim = "#00334D",
+  -- bg_dim = "#00334D",
+  bg = "#00334D",
   bg_visual = "#002F47",
   bg_highlight = "#003F60",
   terminal_black = "#002a3e",
   fg = "#17E3FF",
   fg_dark = "#47D2EA",
   fg_gutter = "#005E8D",
-  dark3 = "#325881",
+  grey = "#325881",
   comment = "#006082",
   dark5 = "#6ee7ff",
   blue0 = "#0089DF",
@@ -130,7 +132,7 @@ function M.setup(opts)
     text = colors.blue7,
   }
 
-  colors.git.ignore = colors.dark3
+  colors.git.ignore = colors.grey
   colors.black = util.darken(colors.bg, 0.8, "#000000")
   colors.border_highlight = util.darken(colors.blue1, 0.8)
   colors.border = colors.teal2
