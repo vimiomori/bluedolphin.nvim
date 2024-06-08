@@ -11,28 +11,28 @@ bluedolphin.normal = {
 }
 
 bluedolphin.insert = {
-  left = { { colors.black, colors.green }, { colors.blue, colors.bg } },
+  left = { { colors.black, colors.green }, { colors.blue, colors.bg_dark } },
 }
 
 bluedolphin.visual = {
-  left = { { colors.black, colors.magenta }, { colors.blue, colors.bg } },
+  left = { { colors.black, colors.magenta }, { colors.blue, colors.bg_dark } },
 }
 
 bluedolphin.replace = {
-  left = { { colors.black, colors.red }, { colors.blue, colors.bg } },
+  left = { { colors.black, colors.red }, { colors.blue, colors.bg_dark } },
 }
 
 bluedolphin.inactive = {
-  left = { { colors.cyan, colors.bg_statusline }, { colors.dark3, colors.bg } },
+  left = { { colors.cyan, colors.bg_statusline }, { colors.dark3, colors.bg_dark } },
   middle = { { colors.fg_gutter, colors.bg_statusline } },
-  right = { { colors.fg_gutter, colors.bg_statusline }, { colors.dark3, colors.bg } },
+  right = { { colors.fg_gutter, colors.bg_statusline }, { colors.dark3, colors.bg_dark } },
 }
 
 bluedolphin.tabline = {
-  left = { { colors.dark3, colors.bg_highlight }, { colors.dark3, colors.bg } },
+  left = { { colors.dark3, colors.bg_highlight }, { colors.dark3, colors.bg_dark } },
   middle = { { colors.fg_gutter, colors.bg_statusline } },
-  right = { { colors.fg_gutter, colors.bg_statusline }, { colors.dark3, colors.bg } },
-  tabsel = { { colors.blue, colors.fg_gutter }, { colors.dark3, colors.bg } },
+  right = { { colors.fg_gutter, colors.bg_statusline }, { colors.dark3, colors.bg_dark } },
+  tabsel = { { colors.blue, colors.fg_gutter }, { colors.dark3, colors.bg_dark } },
 }
 
 return bluedolphin
