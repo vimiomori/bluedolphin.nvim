@@ -83,7 +83,7 @@ function M.setup()
     StatusLine = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- status line of current window
     StatusLineNC = { fg = c.fg_gutter, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { bg = c.bg_statusline, fg = c.fg_gutter }, -- tab pages line, not active tab page label
-    TabLineFill = { bg = c.bg}, -- tab pages line, where there are no labels
+    TabLineFill = { bg = c.bg_statusline }, -- tab pages line, where there are no labels
     TabLineSel = { fg = c.black, bg = c.blue }, -- tab pages line, active tab page label
     Title = { fg = c.blue, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
     Visual = { fg = c.blue10, bg = c.bg_visual }, -- Visual mode selection
@@ -426,7 +426,8 @@ function M.setup()
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NvimTreeWinSeparator = {
-      fg = options.styles.sidebars == "transparent" and c.border or c.bg_sidebar,
+      -- fg = options.styles.sidebars == "transparent" and c.border or c.bg_sidebar,
+      fg = c.bg_sidebar,
       bg = c.bg_sidebar,
     },
     NvimTreeNormalNC = { fg = c.fg_sidebar, bg = c.bg_sidebar },
