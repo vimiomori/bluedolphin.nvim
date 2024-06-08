@@ -48,9 +48,7 @@ function M.setup()
     VertSplit = { fg = c.border }, -- the column separating vertically split windows
     WinSeparator = { fg = c.border, bold = true }, -- the column separating vertically split windows
     Folded = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
-    -- FoldColumn = { bg = options.transparent and c.none or c.bg, fg = c.comment }, -- 'foldcolumn'
     FoldColumn = { bg = c.none, fg = c.comment }, -- 'foldcolumn'
-    -- SignColumn = { bg = options.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
     SignColumn = { bg = c.none, fg = c.fg_gutter }, -- column where |signs| are displayed
     SignColumnSB = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
     Substitute = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
@@ -62,8 +60,8 @@ function M.setup()
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = c.blue }, -- |more-prompt|
     NonText = { fg = c.dark3 }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Normal = { fg = c.fg, bg = options.transparent and c.none or c.bg }, -- normal text
-    NormalNC = { fg = c.fg, bg = options.transparent and c.none or options.dim_inactive and c.bg_dark or c.bg }, -- normal text in non-current windows
+    Normal = { fg = c.fg, bg = c.none or c.bg }, -- normal text
+    NormalNC = { fg = c.fg, bg = c.none or options.dim_inactive and c.bg_dark or c.bg }, -- normal text in non-current windows
     NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in sidebar
     NormalFloat = { fg = c.fg_float, bg = c.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = c.border_highlight, bg = c.bg_float },
@@ -705,11 +703,11 @@ function M.setup()
     -- Notify
     NotifyBackground = { fg = c.fg, bg = c.bg },
     --- Border
-    NotifyERRORBorder = { fg = util.darken(c.error, 0.3), bg = options.transparent and c.none or c.bg },
-    NotifyWARNBorder = { fg = util.darken(c.warning, 0.3), bg = options.transparent and c.none or c.bg },
-    NotifyINFOBorder = { fg = util.darken(c.info, 0.3), bg = options.transparent and c.none or c.bg },
-    NotifyDEBUGBorder = { fg = util.darken(c.comment, 0.3), bg = options.transparent and c.none or c.bg },
-    NotifyTRACEBorder = { fg = util.darken(c.purple, 0.3), bg = options.transparent and c.none or c.bg },
+    NotifyERRORBorder = { fg = util.darken(c.error, 0.3), bg = c.none or c.bg },
+    NotifyWARNBorder = { fg = util.darken(c.warning, 0.3), bg = c.none or c.bg },
+    NotifyINFOBorder = { fg = util.darken(c.info, 0.3), bg = c.none or c.bg },
+    NotifyDEBUGBorder = { fg = util.darken(c.comment, 0.3), bg = c.none or c.bg },
+    NotifyTRACEBorder = { fg = util.darken(c.purple, 0.3), bg = c.none or c.bg },
     --- Icons
     NotifyERRORIcon = { fg = c.error },
     NotifyWARNIcon = { fg = c.warning },
@@ -723,11 +721,11 @@ function M.setup()
     NotifyDEBUGTitle = { fg = c.comment },
     NotifyTRACETitle = { fg = c.purple },
     --- Body
-    NotifyERRORBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
-    NotifyWARNBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
-    NotifyINFOBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
-    NotifyDEBUGBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
-    NotifyTRACEBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
+    NotifyERRORBody = { fg = c.fg, bg = c.none or c.bg },
+    NotifyWARNBody = { fg = c.fg, bg = c.none or c.bg },
+    NotifyINFOBody = { fg = c.fg, bg = c.none or c.bg },
+    NotifyDEBUGBody = { fg = c.fg, bg = c.none or c.bg },
+    NotifyTRACEBody = { fg = c.fg, bg = c.none or c.bg },
 
     -- Mini
     MiniCompletionActiveParameter = { underline = true },
@@ -746,7 +744,7 @@ function M.setup()
     MiniStarterFooter = { fg = c.yellow, italic = true },
     MiniStarterHeader = { fg = c.blue },
     MiniStarterInactive = { fg = c.comment, style = options.styles.comments },
-    MiniStarterItem = { fg = c.fg, bg = options.transparent and c.none or c.bg },
+    MiniStarterItem = { fg = c.fg, bg = c.none or c.bg },
     MiniStarterItemBullet = { fg = c.border_highlight },
     MiniStarterItemPrefix = { fg = c.warning },
     MiniStarterSection = { fg = c.blue1 },

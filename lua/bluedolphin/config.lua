@@ -5,7 +5,6 @@ local M = {}
 ---@field on_highlights fun(highlights: Highlights, colors: ColorScheme)
 local defaults = {
   style = "storm", -- The theme comes in two styles, "colorful" and "bluer".
-  transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
     -- Style to be applied to different syntax groups
