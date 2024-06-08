@@ -9,6 +9,7 @@ M.default = {
   bg_dark = "#00283F",
   bg = "#003955",
   bg_dim = "#00334D",
+  bg_visual = "#002F47",
   bg_highlight = "#003F60",
   terminal_black = "#002a3e",
   fg = "#17E3FF",
@@ -140,7 +141,6 @@ function M.setup(opts)
   colors.bg_sidebar = colors.bg_dark
   colors.bg_float = colors.bg_dark
 
-  colors.bg_visual = colors.bg_dim
   colors.bg_search = colors.fg_gutter
   colors.fg_sidebar = colors.fg_dark
   colors.fg_float = colors.fg
