@@ -29,7 +29,7 @@ function M.setup()
     Foo = { bg = c.magenta2, fg = c.fg },
 
     Comment = { fg = c.comment, style = options.styles.comments }, -- any comment
-    ColorColumn = { bg = c.black }, -- used for the columns set with 'colorcolumn'
+    ColorColumn = { bg = c.red }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.dark5 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = c.bg, bg = c.fg }, -- character under the cursor
     lCursor = { fg = c.bg, bg = c.fg }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -52,7 +52,7 @@ function M.setup()
     SignColumn = { bg = c.none, fg = c.fg_gutter }, -- column where |signs| are displayed
     SignColumnSB = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
     Substitute = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
-    LineNr = { fg = c.comment }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    LineNr = { fg = c.teal }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = c.dark5 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { fg = c.orange, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = c.fg_dark, bold = true }, -- 'showmode' message (e.g., "-- INSERT -- ")
@@ -84,7 +84,7 @@ function M.setup()
     StatusLineNC = { fg = c.fg_gutter, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { bg = c.bg_statusline, fg = c.fg_gutter }, -- tab pages line, not active tab page label
     TabLineFill = { bg = c.bg_statusline }, -- tab pages line, where there are no labels
-    TabLineSel = { fg = c.black, bg = c.blue }, -- tab pages line, active tab page label
+    TabLineSel = { fg = c.red, bg = c.blue }, -- tab pages line, active tab page label
     Title = { fg = c.blue, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
     Visual = { fg = c.blue10, bg = c.bg_visual }, -- Visual mode selection
     VisualNOS = { bg = c.bg_visual }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -767,7 +767,7 @@ function M.setup()
     MiniSurround = { bg = c.orange, fg = c.black },
 
     MiniTablineCurrent = { fg = c.fg, bg = c.fg_gutter },
-    MiniTablineFill = { bg = c.black },
+    MiniTablineFill = { bg = c.red },
     MiniTablineHidden = { fg = c.dark5, bg = c.bg_statusline },
     MiniTablineModifiedCurrent = { fg = c.warning, bg = c.fg_gutter },
     MiniTablineModifiedHidden = { bg = c.bg_statusline, fg = util.darken(c.warning, 0.7) },
