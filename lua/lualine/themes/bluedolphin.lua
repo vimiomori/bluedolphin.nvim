@@ -4,37 +4,37 @@ local config = require("bluedolphin.config").options
 local bluedolphin = {}
 
 bluedolphin.normal = {
-  a = { bg = colors.blue, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.blue },
-  c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
+  a = { bg = colors.fg, fg = colors.black },
+  b = { bg = colors.fg_gutter_2, fg = colors.fg },
+  c = { bg = colors.bg_dim, fg = colors.cyan},
 }
 
 bluedolphin.insert = {
   a = { bg = colors.green, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.green },
+  b = { bg = colors.bg_highlight, fg = colors.green },
 }
 
 bluedolphin.command = {
-  a = { bg = colors.yellow, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.yellow },
+  a = { bg = colors.yellow3, fg = colors.black },
+  b = { bg = colors.bg_highlight, fg = colors.yellow },
 }
 
 bluedolphin.visual = {
-  a = { bg = colors.magenta, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.magenta },
+  a = { bg = colors.pink, fg = colors.black },
+  b = { bg = colors.bg_highlight, fg = colors.magenta },
 }
 
 bluedolphin.replace = {
-  a = { bg = colors.red, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.red },
+  a = { bg = colors.orange, fg = colors.black },
+  b = { bg = colors.bg_highlight, fg = colors.red },
 }
 
 bluedolphin.terminal = {
-  a = {bg = colors.green1, fg = colors.black },
-  b = {bg = colors.fg_gutter, fg=colors.green1 },
+  a = { bg = colors.green1, fg = colors.black },
+  b = { bg = colors.bg_highlight, fg = colors.green1 },
 }
 
-bluedolphin.inactive = {
+bluedolphin.inactive = { 
   a = { bg = colors.bg_statusline, fg = colors.blue },
   b = { bg = colors.bg_statusline, fg = colors.fg_gutter, gui = "bold" },
   c = { bg = colors.bg_statusline, fg = colors.fg_gutter },
