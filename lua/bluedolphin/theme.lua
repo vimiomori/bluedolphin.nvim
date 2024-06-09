@@ -421,8 +421,13 @@ function M.setup()
 
     -- Telescope
     -- TelescopeBorder = { fg = c.border_highlight, bg = c.bg_float },
-    TelescopeBorder = { fg = c.border_highlight, bg = c.bg},
+    TelescopeBorder = { fg = c.border_highlight, bg = c.bg_float },
     TelescopeNormal = { fg = c.fg, bg = c.bg_float },
+    -- TelescopePreview = { fg = c.fg, bg = c.bg_float },
+    TelescopePreviewNormal = { fg = c.fg, bg = c.bg },
+    TelescopePreviewBorder = { fg = c.fg, bg = c.bg },
+    TelescopePromptNormal = { fg = c.fg, bg = c.bg_float },
+    TelescopeResultsNormal = { fg = c.fg, bg = c.bg_float },
 
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
