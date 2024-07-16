@@ -57,7 +57,7 @@ M.default = {
   red = "#FF9898",
   red1 = "#FF7575",
   red2 = "#FFACAF",
-  git = { change = "#C6CD8C", add = "#449dab", delete = "#914c54" },
+  git = { change = "#F6FFAE", add = "#30FFF2", delete = "#FFCBBA" },
   gitSigns = {
     add = "#30FFF2",
     change = "#F6FFAE",
