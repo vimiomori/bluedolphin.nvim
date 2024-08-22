@@ -60,10 +60,10 @@ function M.setup()
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = c.blue }, -- |more-prompt|
     NonText = { fg = c.grey }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Normal = { fg = c.fg, bg = c.bg }, -- normal text
-    -- Normal = { fg = c.fg, bg = options.transparent and c.none or c.bg },
-    -- NormalNC = { fg = c.fg, bg = options.transparent and c.none or options.dim_inactive and c.bg_dark or c.bg },
-    NormalNC = { fg = c.fg, bg = options.dim_inactive and c.bg_dim or c.bg }, -- normal text in non-current windows
+    -- Normal = { fg = c.fg, bg = c.bg }, -- normal text
+    -- NormalNC = { fg = c.fg, bg = options.dim_inactive and c.bg_dim or c.bg }, -- normal text in non-current windows
+    Normal = { fg = c.fg, bg = options.transparent and c.none or c.bg },
+    NormalNC = { fg = c.fg, bg = options.transparent and c.none or options.dim_inactive and c.bg_dark or c.bg },
     -- NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in sidebar
     -- NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in sidebar
     NormalSB = { fg = c.fg_sidebar, bg = options.transparent and c.none or c.bg_sidebar },
@@ -454,8 +454,10 @@ function M.setup()
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NvimTreeWinSeparator = {
       -- fg = options.styles.sidebars == "transparent" and c.border or c.bg_sidebar,
-      fg = c.bg_sidebar,
-      bg = c.bg_sidebar,
+      -- fg = c.bg_sidebar,
+      -- bg = c.bg_sidebar,
+      fg = c.border,
+      bg = options.transparent and c.none or c.bg_sidebar,
     },
     NvimTreeNormalNC = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NvimTreeRootFolder = { fg = c.blue, bold = true },
@@ -464,16 +466,19 @@ function M.setup()
     NvimTreeGitDeleted = { fg = c.git.delete },
     NvimTreeOpenedFile = { bg = c.bg_highlight },
     NvimTreeSpecialFile = { fg = c.purple, underline = true },
-    NvimTreeIndentMarker = { fg = c.fg_gutter },
+    NvimTreeIndentMarker = { fg = c.comment },
     NvimTreeImageFile = { fg = c.fg_sidebar },
     NvimTreeSymlink = { fg = c.blue },
     NvimTreeFolderIcon = { bg = c.none, fg = c.blue },
     -- NvimTreeFolderName= { fg = c.fg_float },
 
-    NeoTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
-    NeoTreeNormalNC = { fg = c.fg_sidebar, bg = c.bg_sidebar },
+    -- NeoTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
+    -- NeoTreeNormalNC = { fg = c.fg_sidebar, bg = c.bg_sidebar },
+    NeoTreeNormal = { fg = c.fg_sidebar, bg = options.transparent and c.none or c.bg_sidebar },
+    NeoTreeNormalNC = { fg = c.fg_sidebar, bg = options.transparent and c.none or c.bg_sidebar },
     NeoTreeDimText = { fg = c.fg_gutter },
-    NeoTreeWinSeparator = { fg = c.bg_dark, bg = c.bg_dark },
+    -- NeoTreeWinSeparator = { fg = c.bg_dark, bg = c.bg_dark },
+    NeoTreeWinSeparator = { fg = c.cyan, bg = options.transparent and c.none or c.bg_sidebar },
     NeoTreeTitleBar = { fg = c.bg_dark, bg = c.bg_dark },
 
     -- Fern
@@ -545,7 +550,8 @@ function M.setup()
     -- BufferLineBackground = { bg = c.bg_dim, fg = c.cyan},
     BufferLineBufferVisible = { bg = c.bg, fg = c.comment },
     BufferLineBufferSelected = { bg = c.bg, fg = c.cyan, bold = true },
-    BufferLineOffsetSeparator = { bg = c.bg_dark, fg = c.bg_dark },
+    -- BufferLineOffsetSeparator = { bg = c.bg_dark, fg = c.bg_dark },
+    BufferLineOffsetSeparator = { bg = options.transparent and c.none or c.bg_dark, fg = c.cyan },
 
     -- Barbar
     -- BufferCurrent = { bg = c.bg, fg = c.fg },
