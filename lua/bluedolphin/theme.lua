@@ -545,14 +545,17 @@ function M.setup()
     healthWarning = { fg = c.warning },
 
     -- BufferLine
-    BufferLineIndicatorSelected = { fg = c.cyan },
-    BufferLineFill = { bg = c.bg_statusline, fg = c.bg_statusline },
-    -- BufferLineBackground = { bg = c.bg_dim, fg = c.cyan},
+    BufferLineIndicatorSelected = { fg = c.green5, bold = true },
+    BufferLineFill = { bg = c.bg, fg = c.bg_statusline },
+    BufferLineBackground = { bg = c.bg, fg = c.comment },
     BufferLineBufferVisible = { bg = c.bg, fg = c.comment },
-    BufferLineBufferSelected = { bg = c.bg, fg = c.cyan, bold = true },
+    BufferLineBufferSelected = { bg = c.bg, fg = c.green5, bold = true },
+    BufferLineBuffer = { bg = c.bg, fg = c.comment, italic = true },
     -- BufferLineOffsetSeparator = { bg = c.bg_dark, fg = c.bg_dark },
     BufferLineOffsetSeparator = { bg = options.transparent and c.none or c.bg_dark, fg = c.cyan },
-
+    BufferLineSeparator = { bg = c.bg, fg = c.bg },
+    BufferLineSeparatorVisible = { bg = c.bg, fg = c.comment },
+    BufferLineSeparatorSelected = { bg = c.bg, fg = c.cyan },
     -- Barbar
     -- BufferCurrent = { bg = c.bg, fg = c.fg },
     -- BufferCurrentERROR = { bg = c.bg, fg = c.error },
