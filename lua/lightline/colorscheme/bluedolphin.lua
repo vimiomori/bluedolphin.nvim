@@ -3,7 +3,7 @@ local colors = require("bluedolphin.colors").setup({ transform = true })
 local bluedolphin = {}
 
 bluedolphin.normal = {
-  left = { { colors.black, colors.blue }, { colors.cyan, colors.fg_gutter } },
+  left = { { colors.fg, colors.blue }, { colors.cyan, colors.fg_gutter } },
   middle = { { colors.fg, colors.bg_statusline } },
   right = { { colors.black, colors.cyan }, { colors.cyan, colors.fg_gutter } },
   error = { { colors.black, colors.error } },

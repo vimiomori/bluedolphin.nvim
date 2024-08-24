@@ -1,10 +1,12 @@
 local M = {}
 
----@class Config
+---@class bluedolphin.Config
 ---@field on_colors fun(colors: ColorScheme)
----@field on_highlights fun(highlights: Highlights, colors: ColorScheme)
-local defaults = {
-  style = "storm", -- The theme comes in two styles, "colorful" and "bluer".
+---@field on_highlights fun(highlights: bluedolphin.Highlights, colors: ColorScheme)
+M.defaults = {
+  style = "colorful", -- The theme comes in two styles, "colorful" and "bluer".
+  light_style = "night", -- The theme is used when the background is set to light
+  transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
     -- Style to be applied to different syntax groups
@@ -14,15 +16,13 @@ local defaults = {
     functions = {},
     variables = {},
     -- Background styles. Can be "dark", "transparent" or "normal"
-    sidebars = "dark", -- style for sidebars, see below
-    floats = "dark", -- style for floating windows
+    sidebars = "normal", -- style for sidebars, see below
+    floats = "transparent", -- style for floating windows
+    bufferline = "normal", -- style for bufferline, see below
   },
-  sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
   day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
-  hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
-  transparent = true,
   dim_inactive = false, -- dims inactive windows
-  lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
+  lualine_bold = true, -- When `true`, section headers in the lualine theme will be bold
 
   --- You can override specific color groups to use other groups or a hex color
   --- function will be called with a ColorScheme table
@@ -31,28 +31,50 @@ local defaults = {
 
   --- You can override specific highlights to use other groups or a hex color
   --- function will be called with a Highlights and ColorScheme table
-  ---@param highlights Highlights
+  ---@param highlights bluedolphin.Highlights
   ---@param colors ColorScheme
   on_highlights = function(highlights, colors) end,
+
+  cache = true, -- When set to true, the theme will be cached for better performance
+
+  ---@type table<string, boolean|{enabled:boolean}>
+  plugins = {
+    -- enable all plugins when not using lazy.nvim
+    -- set to false to manually enable/disable plugins
+    all = package.loaded.lazy == nil,
+    -- uses your plugin manager to automatically enable needed plugins
+    -- currently only lazy.nvim is supported
+    auto = true,
+    -- add any plugins here that you want to enable
+    -- for all possible plugins, see:
+    --   * https://github.com/folke/bluedolphin.nvim/tree/main/lua/bluedolphin/groups
+    -- telescope = true,
+  },
 }
 
----@type Config
-M.options = {}
+---@type bluedolphin.Config
+M.options = nil
 
----@param options Config|nil
+---@param options? bluedolphin.Config
 function M.setup(options)
-  M.options = vim.tbl_deep_extend("force", {}, defaults, options or {})
+  M.options = vim.tbl_deep_extend("force", {}, M.defaults, options or {})
 end
 
----@param options Config|nil
-function M.extend(options)
-  M.options = vim.tbl_deep_extend("force", {}, M.options or defaults, options or {})
+---@param opts? bluedolphin.Config
+function M.extend(opts)
+  return opts and vim.tbl_deep_extend("force", {}, M.options, opts) or M.options
 end
 
 function M.is_bluer()
   return M.options.style == "bluer"
 end
 
-M.setup()
+setmetatable(M, {
+  __index = function(_, k)
+    if k == "options" then
+      return M.defaults
+    end
+  end,
+})
 
 return M

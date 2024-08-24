@@ -1,1 +1,3 @@
-require("bluedolphin")._load()
+require("bluedolphin").load({
+  style = vim.o.background == "light" and "day" or nil,
+})

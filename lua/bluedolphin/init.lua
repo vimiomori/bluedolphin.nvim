@@ -1,31 +1,26 @@
-local util = require("bluedolphin.util")
-local theme = require("bluedolphin.theme")
 local config = require("bluedolphin.config")
 
 local M = {}
+---@type {light?: string, dark?: string}
+M.styles = {}
 
-function M._load(style)
-  if style and not M._style then
-    M._style = require("bluedolphin.config").options.style
-  end
-  if not style and M._style then
-    require("bluedolphin.config").options.style = M._style
-    M._style = nil
-  end
-  M.load({ style = style, use_background = style == nil })
-end
-
----@param opts Config|nil
+---@param opts? bluedolphin.Config
 function M.load(opts)
-  if opts then
-    require("bluedolphin.config").extend(opts)
+  opts = require("bluedolphin.config").extend(opts)
+  local bg = vim.o.background
+  local style_bg = opts.style == "day" and "light" or "dark"
+
+  if bg ~= style_bg then
+    if vim.g.colors_name == "bluedolphin-" .. opts.style then
+      opts.style = bg == "light" and (M.styles.light or "day") or (M.styles.dark or "colorful")
+    else
+      vim.o.background = style_bg
+    end
   end
-  util.load(theme.setup())
+  M.styles[vim.o.background] = opts.style
+  return require("bluedolphin.theme").setup(opts)
 end
 
 M.setup = config.setup
-
--- keep for backward compatibility
-M.colorscheme = M.load
 
 return M
