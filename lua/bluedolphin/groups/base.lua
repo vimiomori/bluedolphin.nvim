@@ -51,8 +51,8 @@ function M.get(c, opts)
     NormalSB = { fg = c.fg_sidebar, bg = opts.transparent and c.none or c.bg_sidebar },
     NormalFloat = { fg = c.fg_float, bg = c.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = c.border_highlight, bg = c.bg_float },
-    -- FloatTitle = { fg = c.border_highlight, bg = c.bg_float },
-    FloatTitle = { fg = c.bg_float, bg = c.border_highlight},
+    FloatTitle = { fg = c.border_highlight, bg = c.bg_float },
+    -- FloatTitle = { fg = c.fg_float, bg = c.border_highlight},
     Pmenu = { bg = c.bg_popup, fg = c.fg }, -- Popup menu: normal item.
     PmenuSel                    = { bg = Util.blend_bg(c.fg_gutter, 0.8) }, -- Popup menu: selected item.
     PmenuSbar                   = { bg = Util.blend_fg(c.bg_popup, 0.95) }, -- Popup menu: scrollbar.
@@ -82,30 +82,30 @@ function M.get(c, opts)
     WinBarNC                    = "StatusLineNC", -- window bar in inactive windows
 
     Constant                    = { fg = c.orange }, -- (preferred) any constant
-    String                      = { fg = c.green }, --   a string constant: "this is a string"
-    Character                   = { fg = c.green }, --  a character constant: 'c', '\n'
+    String                      = { fg = Util.blend(c.cyan2, 0.8, c.bg) }, --   a string constant: "this is a string"
+    Character                   = { fg = Util.blend(c.cyan2, 0.8, c.bg) }, --  a character constant: 'c', '\n'
     Number = { fg = c.orange }, --   a number constant: 234, 0xff
     Boolean = { fg = c.yellow }, --  a boolean constant: TRUE, false
     Float = { fg = c.orange }, --    a floating point constant: 2.3e10
 
     Identifier                  = { fg = c.magenta, style = opts.styles.variables }, -- (preferred) any variable name
-    Function = { fg = c.blue9, style = opts.styles.functions }, -- function name (also: methods for classes)
+    Function = { fg = c.cyan2, style = opts.styles.functions }, -- function name (also: methods for classes)
 
     Statement = { fg = c.blue9 }, -- (preferred) any statement
-    Conditional = { fg = c.blue9 }, --  if, then, else, endif, switch, etc.
-    Repeat = { fg = c.blue9 }, --   for, do, while, etc.
-    Label = { fg = c.blue9 }, --    case, default, etc.
-    Operator = { fg = c.green3 }, -- "sizeof", "+", "*", etc.
+    Conditional = { fg = c.blue9}, --  if, then, else, endif, switch, etc.
+    Repeat = { fg = c.blue9}, --   for, do, while, etc.
+    Label = { fg = c.blue9}, --    case, default, etc.
+    Operator = { fg = c.yellow4 }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = c.blue9, style = opts.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
-    PreProc = { fg = c.yellow4 }, -- (preferred) generic Preprocessor and imports
-    -- Include       = { }, --  preprocessor #include
+    PreProc = { fg = c.pink, italic = true}, -- (preferred) generic Preprocessor and imports
+    Include       = "PreProc", --  preprocessor #include
     -- Define        = { }, --   preprocessor #define
     -- Macro         = { }, --    same as Define
     -- PreCondit     = { }, --  preprocessor #if, #else, #endif, etc.
 
-    Type = { fg = c.green5 }, -- (preferred) int, long, char, etc.
+    Type = { fg = c.green}, -- (preferred) int, long, char, etc.
     -- StorageClass  = { }, -- static, register, volatile, etc.
     -- Structure     = { }, --  struct, union, enum, etc.
     -- Typedef       = { }, --  A typedef
@@ -174,9 +174,9 @@ function M.get(c, opts)
     diffAdded                   = { fg = c.git.add },
     diffRemoved                 = { fg = c.git.delete },
     diffChanged                 = { fg = c.git.change },
-    diffOldFile                 = { fg = c.yellow },
-    diffNewFile                 = { fg = c.orange },
-    diffFile                    = { fg = c.blue },
+    diffOldFile                 = { fg = c.pink},
+    diffNewFile                 = { fg = c.yellow},
+    diffFile                    = { fg = c.cyan2},
     diffLine                    = { fg = c.comment },
     diffIndexLine               = { fg = c.magenta },
     helpExample                 = { fg = c.comment },

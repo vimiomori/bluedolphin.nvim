@@ -32,7 +32,7 @@ function M.get(c, opts)
     ["@function.call"]              = { fg = c.yellow3 },
     ["@function.macro"]             = "Macro",
     ["@function.method"]            = "Function",
-    ["@function.method.call"]       = "@function.method",
+    ["@function.method.call"]       = "@function.call",
     ["@keyword"]                    = "Keyword", -- For keywords that don't fall in previous categories.
     ["@keyword.conditional"]        = "Conditional",
     ["@keyword.coroutine"]          = "@keyword",
@@ -73,7 +73,7 @@ function M.get(c, opts)
     ["@none"]                       = {},
     ["@number"]                     = "Number",
     ["@number.float"]               = "Float",
-    ["@operator"]                   = { fg = c.blue8 }, -- For any operator: `+`, but also `->` and `*` in C.
+    ["@operator"]                   = { fg = c.green3 }, -- For any operator: `+`, but also `->` and `*` in C.
     ["@property"]                   = { fg = c.pink},
     ["@punctuation.bracket"]        = { fg = c.yellow2 }, -- For brackets and parens.
     ["@punctuation.delimiter"]      = { fg = c.green3 }, -- For delimiters ie: `.`
@@ -95,8 +95,8 @@ function M.get(c, opts)
     ["@type.qualifier"]             = "@keyword",
     ["@variable"]                   = { fg = c.white, style = opts.styles.variables }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"]           = { fg = c.red2 }, -- Variable names that are defined by the languages, like `this` or `self`.
-    ["@variable.member"]            = { fg = c.green1 }, -- For fields.
-    ["@variable.parameter"]         = { fg = c.yellow2 }, -- For parameters of a function.
+    ["@variable.member"]            = { fg = c.blue }, -- For fields.
+    ["@variable.parameter"]         = "@parameter", -- For parameters of a function.
     ["@variable.parameter.builtin"] = { fg = Util.blend_fg(c.yellow, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
 
@@ -114,7 +114,7 @@ function M.get(c, opts)
     ["@conditional.go"] = { fg = c.blue, style = opts.styles.functions }, -- For keywords used to define a fuction.
 
     --- Types
-    ["@type.builtin.go"] = { fg = c.green5 },
+    ["@type.builtin.go"] = "Type",
     ["@field"] = { fg = c.lavendar }, -- For fields.
 
     --- Text

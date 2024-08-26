@@ -30,9 +30,9 @@ function M.setup(opts)
   colors.none = "NONE"
 
   colors.diff = {
-    add = Util.blend_bg(colors.green2, 0.15),
-    delete = Util.blend_bg(colors.red1, 0.15),
-    change = Util.blend_bg(colors.blue7, 0.15),
+    add = Util.blend_bg(colors.green5, 0.15),
+    delete = Util.blend_bg(colors.red2, 0.15),
+    change = Util.blend_bg(colors.blue, 0.15),
     text = colors.blue7,
   }
 
@@ -69,7 +69,7 @@ function M.setup(opts)
   colors.info = colors.blue
   colors.hint = colors.teal
 
-  colors.rainbow = { colors.blue, colors.yellow, colors.green, colors.teal, colors.magenta, colors.purple }
+  colors.rainbow = { colors.blue8, colors.yellow3, colors.green5, colors.teal, colors.pink, colors.lavendar }
 
   opts.on_colors(colors)
 
