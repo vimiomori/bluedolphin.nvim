@@ -38,6 +38,7 @@ local ret = {
   lavendar = "#D6D9FF",
   pink = "#FFEBFE",
   orange = "#FFB9A3",
+  orange2 = "#FED1B3",
   yellow = "#F3FF95",
   yellow2 = "#FDFFC4",
   yellow3 = "#FEFFD5",

@@ -99,7 +99,7 @@ function M.get(c, opts)
     Keyword = { fg = c.blue9, style = opts.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
-    PreProc = { fg = c.fg, italic = true}, -- (preferred) generic Preprocessor and imports
+    PreProc = { fg = c.yellow5, italic = true}, -- (preferred) generic Preprocessor and imports
     Include       = "PreProc", --  preprocessor #include
     -- Define        = { }, --   preprocessor #define
     -- Macro         = { }, --    same as Define
