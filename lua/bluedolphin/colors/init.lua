@@ -58,8 +58,8 @@ function M.setup(opts)
     or opts.styles.floats == "dark" and colors.bg_dark
     or colors.bg_dim
 
-  colors.bg_visual = Util.blend_bg(colors.blue0, 0.4)
-  colors.bg_search = colors.blue0
+  colors.bg_visual = Util.blend_bg(colors.teal4, 0.4)
+  colors.bg_search = colors.lavendar
   colors.fg_sidebar = colors.fg_dark
   colors.fg_float = colors.fg
 
