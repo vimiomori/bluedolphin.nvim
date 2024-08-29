@@ -8,7 +8,7 @@ M.url = "https://github.com/MeanderingProgrammer/markdown.nvim"
 function M.get(c, opts)
   -- stylua: ignore
   local ret = {
-    RenderMarkdownBullet    = {fg = c.orange}, -- horizontal rule
+    RenderMarkdownBullet    = {fg = c.yellow}, -- horizontal rule
     RenderMarkdownCode      = { bg = c.bg_dark },
     RenderMarkdownDash      = {fg = c.orange}, -- horizontal rule
     RenderMarkdownTableHead = { fg = c.red},
