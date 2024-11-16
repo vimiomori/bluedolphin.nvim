@@ -23,7 +23,7 @@ function M.get(c, opts)
     NeoTreeTabInactive         = { fg = c.comment, bg = c.bg_sidebar},
     NeoTreeTabSeparatorActive  = { fg = c.blue, bg = c.bg_dark },
     NeoTreeTabSeparatorInactive= { fg = c.bg, bg = c.bg_sidebar},
-    NeoTreeWinSeparator = { fg = c.cyan, bg = c.bg_sidebar},
+    NeoTreeWinSeparator = { fg = c.bg, bg = c.bg},
     NeoTreeTitleBar = { fg = c.bg, bg = c.fg},
     NeoTreeDotfile = { fg = c.comment },
     NeoTreeFadeText1 = { fg = c.comment },
