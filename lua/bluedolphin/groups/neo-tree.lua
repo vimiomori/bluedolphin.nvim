@@ -6,7 +6,9 @@ M.url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
 
 ---@type bluedolphin.HighlightsFn
 function M.get(c, opts)
-  local dark = opts.styles.sidebars == "transparent" and c.none or c.bg_dark
+  -- local dark = opts.styles.sidebars == "transparent" and c.none
+  --   or opts.styles.sidebars == "dark" and c.bg_dark
+  --   or c.bg_alt
     -- or Util.blend(c.bg_sidebar, 0.8, opts.style == "bluer" and c.blue or "#000000")
   -- stylua: ignore
   return {
@@ -15,13 +17,13 @@ function M.get(c, opts)
     NeoTreeGitModified         = { fg = c.orange },
     NeoTreeGitStaged           = { fg = c.green1 },
     NeoTreeGitUntracked        = { fg = c.fg},
-    NeoTreeNormal              = { fg = c.fg_sidebar, bg = dark },
-    NeoTreeNormalNC            = { fg = c.fg_sidebar, bg = dark },
+    NeoTreeNormal              = { fg = c.fg_sidebar, bg = c.bg_sidebar},
+    NeoTreeNormalNC            = { fg = c.fg_sidebar, bg = c.bg_sidebar},
     NeoTreeTabActive           = { fg = c.blue, bg = c.bg_dark, bold = true },
-    NeoTreeTabInactive         = { fg = c.comment, bg = dark },
+    NeoTreeTabInactive         = { fg = c.comment, bg = c.bg_sidebar},
     NeoTreeTabSeparatorActive  = { fg = c.blue, bg = c.bg_dark },
-    NeoTreeTabSeparatorInactive= { fg = c.bg, bg = dark },
-    NeoTreeWinSeparator = { fg = c.cyan, bg = dark },
+    NeoTreeTabSeparatorInactive= { fg = c.bg, bg = c.bg_sidebar},
+    NeoTreeWinSeparator = { fg = c.cyan, bg = c.bg_sidebar},
     NeoTreeTitleBar = { fg = c.bg, bg = c.fg},
     NeoTreeDotfile = { fg = c.comment },
     NeoTreeFadeText1 = { fg = c.comment },

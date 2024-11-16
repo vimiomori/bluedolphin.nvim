@@ -42,7 +42,7 @@ function M.setup(opts)
   colors.border = colors.black
 
   -- Popups and statusline always get a dark background
-  colors.bg_popup = colors.bg_dark
+  colors.bg_popup = colors.bg_alt
   colors.bg_statusline = colors.bg_dark
 
   -- Sidebar and Floats are configurable
@@ -58,7 +58,7 @@ function M.setup(opts)
     or opts.styles.floats == "dark" and colors.bg_dark
     or colors.bg_dim
 
-  colors.bg_visual = Util.blend_bg(colors.teal4, 0.4)
+  colors.bg_visual = colors.dimcomment
   colors.bg_search = Util.blend_bg(colors.yellow, 0.3)
   colors.fg_sidebar = colors.fg_dark
   colors.fg_float = colors.fg
