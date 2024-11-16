@@ -27,7 +27,7 @@ function M.get(c, opts)
     -- TermCursorNC= { }, -- cursor in an unfocused terminal
     ErrorMsg = { fg = c.error }, -- error messages on the command line
     VertSplit = { fg = c.border_highlight, bg = bg }, -- the column separating vertically split windows
-    WinSeparator = { fg = bg, bg = bg }, -- the column separating vertically split windows
+    WinSeparator = { fg = c.border_highlight, bg = bg }, -- the column separating vertically split windows
     Folded = { fg = c.blue, bg = c.bg_visual }, -- line used for closed folds
     FoldColumn = { bg = c.none, fg = c.comment }, -- 'foldcolumn'
     SignColumn = { bg = c.none, fg = c.fg_gutter }, -- column where |signs| are displayed
@@ -43,8 +43,6 @@ function M.get(c, opts)
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = c.blue }, -- |more-prompt|
     NonText = { fg = c.grey }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    -- Normal = { fg = c.fg, bg = c.bg }, -- normal text
-    -- NormalNC = { fg = c.fg, bg = opts.dim_inactive and c.bg_dim or c.bg }, -- normal text in non-current windows
     Normal = { fg = c.fg, bg = opts.transparent and c.none or c.bg },
     NormalNC = { fg = c.fg, bg = opts.transparent and c.none or opts.dim_inactive and c.bg_dark or c.bg },
     -- NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in sidebar
