@@ -7,7 +7,7 @@ function M.get(c, opts)
   -- stylua: ignore
   return {
     TroubleText   = { fg = c.fg_dark },
-    TroubleCount  = { fg = c.magenta, bg = c.fg_gutter },
+    TroubleCount  = { fg = c.magenta, bg = c.dimcomment},
     TroubleNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
   }
 end
