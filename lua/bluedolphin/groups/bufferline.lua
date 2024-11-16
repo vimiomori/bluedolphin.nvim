@@ -51,6 +51,7 @@ function M.get(c, opts)
     BufferLineHint= { bg= c.bg_bufferline, fg=c.comment},
     BufferLineInfo= { bg= c.bg_bufferline, fg=c.comment},
     BufferLineError= { bg= c.bg_bufferline, fg=c.comment},
+    BufferLineNumbers = {bg = c.bg_dim},
   }
 end
 
