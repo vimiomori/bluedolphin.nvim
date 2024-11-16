@@ -37,6 +37,20 @@ function M.get(c, opts)
     BufferLineMiniIconsRedSelected = { bg = c.bg, fg = c.red},
     BufferLineMiniIconsYellow = { bg = c.bg_bufferline, fg = c.yellow },
     BufferLineMiniIconsYellowSelected = { bg = c.bg, fg = c.yellow},
+    BufferLineDiagnostic = { bg = c.bg_bufferline},
+    BufferLineDiagnosticVisible = { bg = c.bg_bufferline, fg=c.comment},
+    BufferLineWarningDiagnostic = { bg= c.bg_bufferline, fg=c.comment},
+    BufferLineWarningDiagnosticVisible = { bg= c.bg_bufferline, fg=c.comment},
+    BufferLineHintDiagnostic = { bg= c.bg_bufferline, fg=c.comment},
+    BufferLineHintDiagnosticVisible = { bg= c.bg_bufferline, fg=c.comment},
+    BufferLineInfoDiagnostic = { bg= c.bg_bufferline, fg=c.comment},
+    BufferLineInfoDiagnosticVisible = { bg= c.bg_bufferline, fg=c.comment},
+    BufferLineErrorDiagnostic = { bg= c.bg_bufferline, fg=c.comment},
+    BufferLineErrorDiagnosticVisible = { bg= c.bg_bufferline, fg=c.comment},
+    BufferLineWarning= { bg= c.bg_bufferline, fg=c.comment},
+    BufferLineHint= { bg= c.bg_bufferline, fg=c.comment},
+    BufferLineInfo= { bg= c.bg_bufferline, fg=c.comment},
+    BufferLineError= { bg= c.bg_bufferline, fg=c.comment},
   }
 end
 
